@@ -6,6 +6,7 @@
 package br.edu.infnet.mono.domain.controller;
 
 import br.edu.infnet.mono.domain.exception.BusinessException;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -32,14 +33,14 @@ public abstract class ControllerBase<T, K> {
     protected abstract ResponseEntity<List<T>> acaoListarTodos();
 
     @PostMapping(produces = {"application/json"})
-    public ResponseEntity<T> incluir(@RequestBody T dto) throws BusinessException {
+    public ResponseEntity<T> incluir(@Valid @RequestBody T dto) throws BusinessException {
         return this.acaoIncluir(dto);
     }
 
     protected abstract ResponseEntity<T> acaoIncluir(T dto) throws BusinessException;
 
     @PutMapping(value = "/{id}")
-    public ResponseEntity<T> alterar(@PathVariable("id") K id, @RequestBody T dto) throws BusinessException {
+    public ResponseEntity<T> alterar(@PathVariable("id") K id, @Valid @RequestBody T dto) throws BusinessException {
         return this.acaoAlterar(id, dto);
     }
 

@@ -48,7 +48,6 @@ public class Condominio extends EntidadeBase {
     @Enumerated(EnumType.ORDINAL)
     private EnumTipoSituacao situacao;
 
-    protected Condominio() {}
 
     @Override
     public String toString() {
