@@ -11,18 +11,6 @@
 	<artifactId>common-domain</artifactId>
 	<name>common-domain</name>
 	<description>Entidades comuns do projeto</description>
-<!--    <build>-->
-<!--        <plugins>-->
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <configuration>-->
-<!--                    <source>14</source>-->
-<!--                    <target>14</target>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-<!--        </plugins>-->
-<!--    </build>-->
     <packaging>jar</packaging>
 
 	<dependencies>
@@ -52,11 +40,6 @@
             <groupId>br.edu.infnet.mono</groupId>
             <artifactId>external-api</artifactId>
         </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>br.edu.infnet.mono</groupId>-->
-<!--            <artifactId>main-app</artifactId>-->
-<!--        </dependency>-->
 
     </dependencies>
 
