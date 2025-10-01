@@ -1,0 +1,1017 @@
+{
+	"info": {
+		"_postman_id": "ff41d77d-7790-42df-a59d-3033613429cf",
+		"name": "krossbyapi-infnet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27913396"
+	},
+	"item": [
+		{
+			"name": "condominio",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/condominio/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"condominio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/condominio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"condominio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomeCondominio\": \"Condominio de Teste\",\n    \"tipoCondominio\": 0,\n    \"totalUnidades\": 100,\n    \"cnpj\": null,\n    \"telefoneContato1\": \"4199999888\",\n    \"telefoneContato2\": null,\n    \"endereco\": {\n        \"logradouro\": \"xxxxxxxxx\",\n        \"numero\": \"201\",\n        \"complemento\": null,\n        \"bairro\" : null,\n        \"localidade\" : \"São Jose\",\n        \"cep\" : \"83025335\",\n        \"estado\" : \"Parana\",\n        \"uf\" : \"PR\"\n    },\n    \"nomeSindico\": \"nome sindoco\",\n    \"telefoneSindico\": \"41991793800\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/condominio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"condominio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nomeCondominio\": \"Condominio atualizado\",\n    \"tipoCondominio\": 0,\n    \"totalUnidades\": 150,\n    \"cnpj\": 83000000180,\n    \"telefoneContato1\": \"41999998\",\n    \"telefoneContato2\": \"41777777777\",\n    \"endereco\": {\n        \"logradouro\": \"rua dionizio\",\n        \"numero\": \"201\",\n        \"complemento\": \"residnecial\",\n        \"bairro\" : \"santo antonio\",\n        \"localidade\" : \"São José dos Pinhais\",\n        \"cep\" : \"83025335\",\n        \"estado\" : \"Parana\",\n        \"uf\" : \"PR\"\n    },\n    \"nomeSindico\": \"Javier Telles Sampaio\",\n    \"telefoneSindico\": \"41999998888\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/condominio/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"condominio",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/condominio/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"condominio",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inativar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/condominio/3/inativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"condominio",
+								"3",
+								"inativar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"carlos teste\",\n    \"sobreNome\": \"sobrenome\",\n    \"cpf\": \"110.021.260-45\",\n    \"rg\": null,\n    \"telefone1\": \"41999900000\",\n    \"telefone2\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Carlos nome novo\",\n    \"sobreNome\": \"sobrenome correto\",\n    \"cpf\": \"110.021.260-45\",\n    \"rg\": null,\n    \"telefone1\": \"4199991111\",\n    \"telefone2\": null,\n    \"situacao\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario/19",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"19"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inativar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-condominio/10/inativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio",
+								"10",
+								"inativar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar usuario por CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario/cpf?cpf=223.543.670-66",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario",
+								"cpf"
+							],
+							"query": [
+								{
+									"key": "cpf",
+									"value": "223.543.670-66"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario condominio",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-condominio/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listar moradias do propietario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-condominio/moradias/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio",
+								"moradias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-condominio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuario\": {\n        \"id\": 2\n    },\n    \"tipoResidente\": \"PROPIETARIO\",\n    \"email\": \"usuarioapi@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario-condominio",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuario\": {\n        \"id\": 2\n    },\n    \"tipoResidente\": \"MORADOR\",\n    \"email\": \"usuarioupdate@gmail.com\",\n    \"situacao\": \"ATIVO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario-condominio/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-condominio/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inativar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-condominio/4/inativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-condominio",
+								"4",
+								"inativar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario sistema",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-sistema/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-sistema",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"usuario\": {\n            \"id\": 18\n        },\n        \"tipoUsuarioSistema\": \"OPERADOR\",\n        \"email\": \"operador10@gmail.com\",\n        \"senha\": \"senha1\",\n        \"password\": \"password1\",\n        \"situacao\": \"ATIVO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario-sistema",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"usuario\": {\n            \"id\": 18\n        },\n        \"tipoUsuarioSistema\": \"OPERADOR\",\n        \"email\": \"portaria1@gmail.com\",\n        \"senha\": \"senha1\",\n        \"password\": \"password1\",\n        \"situacao\": \"ATIVO\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/usuario-sistema/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-sistema/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inativar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-sistema/2/inativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema",
+								"2",
+								"inativar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "moradia",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/moradia/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moradia",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/moradia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moradia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoMoradia\": \"APARTAMENTO\",\n    \"numeroUnidade\": \"501\",\n    \"situacao\": \"ATIVO\",\n    \"quadraTorreBloco\": null,\n    \"lote\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/moradia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moradia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tipoMoradia\": \"APARTAMENTO\",\n    \"morador\": {\n        \"id\":17\n    },\n    \"numeroUnidade\": \"501\",\n    \"situacao\": \"ATIVO\",\n    \"quadraTorreBloco\": null,\n    \"lote\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/moradia/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moradia",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/moradia/17",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"moradia",
+								"17"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inativar",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/usuario-sistema/2/inativar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuario-sistema",
+								"2",
+								"inativar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "visitante",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/visitante/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/visitante",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuarioVisitante\": {\n        \"id\": 17\n    },\n    \"tipoAcesso\": \"VISITANTE\",\n    \"cartaoAcesso\": \"70001\",\n    \"moradiaDestinoVisitante\": {\n        \"id\": 1\n    },\n    \"usuarioAutorizacao\": {\n        \"id\": 1\n    },\n    \"observacao\": \"sem observção\",\n    \"ingresso\": \"25/08/2025 08:00:00\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/visitante",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"usuarioVisitante\": {\n        \"id\": 17\n    },\n    \"tipoAcesso\": \"VISITANTE\",\n    \"cartaoAcesso\": \"40001\",\n    \"moradiaDestinoVisitante\": {\n        \"id\": 1\n    },\n    \"usuarioAutorizacao\": {\n        \"id\": 1\n    },\n    \"observacao\": \"acesso novo update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/visitante/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/visitante/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar visitantes por data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/visitante/data?data=07/08/2025",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante",
+								"data"
+							],
+							"query": [
+								{
+									"key": "data",
+									"value": "07/08/2025"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "buscar visitante por CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/visitante/cpf?cpf=223.543.670-66",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"visitante",
+								"cpf"
+							],
+							"query": [
+								{
+									"key": "cpf",
+									"value": "223.543.670-66"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "correspondencia",
+			"item": [
+				{
+					"name": "obter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/correspondencia/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"correspondencia",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/correspondencia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"correspondencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"moradiaEntrega\": {\n        \"id\": 1\n    },\n    \"nomeDestinatario\": \"Carlos\",\n    \"telefoneDestinatario\": \"4199999999\",\n    \"emailDestinatario\": null,\n    \"codigoIdentificadorDaEntrega\": null,\n    \"usuarioRecepcao\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/correspondencia",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"correspondencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"moradiaEntrega\": {\n        \"id\": 2\n    },\n    \"nomeDestinatario\": \"Carlos\",\n    \"telefoneDestinatario\": \"4199999999\",\n    \"emailDestinatario\": \"emailteste@gmail.com\",\n    \"codigoIdentificadorDaEntrega\": \"ABG67890AS\",\n    \"usuarioRecepcao\": {\n        \"id\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/correspondencia/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"correspondencia",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Apagar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/correspondencia/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"correspondencia",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
