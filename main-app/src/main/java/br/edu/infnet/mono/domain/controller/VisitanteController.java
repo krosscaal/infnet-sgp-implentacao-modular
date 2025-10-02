@@ -8,9 +8,9 @@ package br.edu.infnet.mono.domain.controller;
 import br.edu.infnet.mono.domain.dto.VisitanteDTO;
 import br.edu.infnet.mono.domain.exception.BusinessException;
 import br.edu.infnet.mono.domain.service.VisitanteService;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,7 +27,6 @@ public class VisitanteController extends ControllerBase<VisitanteDTO, Long> {
     public VisitanteController(VisitanteService visitanteService) {
         this.visitanteService = visitanteService;
     }
-
 
     @Override
     protected ResponseEntity<VisitanteDTO> acaoBuscarPorId(Long id) throws BusinessException {
@@ -54,11 +53,13 @@ public class VisitanteController extends ControllerBase<VisitanteDTO, Long> {
         visitanteService.excluir(id);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping(value = "/cpf")
     public ResponseEntity<List<VisitanteDTO>> acaoBuscarPorCpf(@RequestParam(value = "cpf") String cpf) throws BusinessException {
         return ResponseEntity.ok(visitanteService.buscarPorCpf(cpf));
     }
 
+    @PreAuthorize("hasAnyRole('ADMIN', 'USER')")
     @GetMapping(value = "/data")
     public ResponseEntity<List<VisitanteDTO>> acaoBuscarVisitantesPorDataIngreso(@RequestParam(value = "data") String data) {
         return ResponseEntity.ok(visitanteService.buscarVisitantesPorDataIngresso(data));

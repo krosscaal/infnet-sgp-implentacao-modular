@@ -46,7 +46,6 @@ public class UsuarioDTO {
     @Pattern(regexp = "^\\d{10,11}$", message = DEVE_CONTER_SOMENTE_NUMEROS)
     private String telefone2;
 
-    @NotNull(message = NAO_NULL)
     @Enumerated(EnumType.STRING)
     private EnumTipoSituacao situacao;
 

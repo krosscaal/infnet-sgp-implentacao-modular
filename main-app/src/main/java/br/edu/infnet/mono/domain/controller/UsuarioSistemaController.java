@@ -11,6 +11,7 @@ import br.edu.infnet.mono.domain.service.UsuarioSistemaService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -53,8 +54,9 @@ public class UsuarioSistemaController extends ControllerBase<UsuarioSistemaDTO, 
         service.excluir(id);
     }
 
+    @PreAuthorize( "hasRole('ADMIN')")
     @PatchMapping(value = "/{id}/inativar")
-    public ResponseEntity<UsuarioSistemaDTO> inativar(@PathVariable Long id) throws BusinessException {
+    public ResponseEntity<UsuarioSistemaDTO> inativar(@PathVariable("id") Long id) throws BusinessException {
         return ResponseEntity.ok(service.inativar(id));
     }
 }

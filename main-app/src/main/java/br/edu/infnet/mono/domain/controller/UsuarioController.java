@@ -9,9 +9,9 @@ import br.edu.infnet.mono.domain.dto.UsuarioDTO;
 import br.edu.infnet.mono.domain.exception.BusinessException;
 import br.edu.infnet.mono.domain.exception.UsuarioException;
 import br.edu.infnet.mono.domain.service.UsuarioService;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -50,11 +50,13 @@ public class UsuarioController extends ControllerBase<UsuarioDTO, Long> {
         usuarioService.excluir(id);
     }
 
+    @PreAuthorize("hasRole('ADMIM')")
     @PatchMapping(value = "/{id}/inativar")
-    public ResponseEntity<UsuarioDTO> inativar(@PathVariable Long id) throws UsuarioException {
+    public ResponseEntity<UsuarioDTO> inativar(@PathVariable("id") Long id) throws UsuarioException {
         return ResponseEntity.ok(usuarioService.inativar(id));
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping(value = "/cpf")
     public ResponseEntity<UsuarioDTO> acaoBuscarPorCpf(@RequestParam(value = "cpf") String cpf) throws BusinessException {
         return ResponseEntity.ok(usuarioService.buscarPorCpf(cpf));

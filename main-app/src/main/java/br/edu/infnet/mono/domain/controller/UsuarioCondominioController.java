@@ -11,6 +11,7 @@ import br.edu.infnet.mono.domain.exception.BusinessException;
 import br.edu.infnet.mono.domain.service.UsuarioCondominioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -49,11 +50,12 @@ public class UsuarioCondominioController extends ControllerBase<UsuarioCondomini
         service.excluir(id);
     }
 
+    @PreAuthorize( "hasRole('ADMIN')")
     @PatchMapping(value = "/{id}/inativar")
-    public ResponseEntity<UsuarioCondominioDTO> inativar(@PathVariable Long id) throws BusinessException {
+    public ResponseEntity<UsuarioCondominioDTO> inativar(@PathVariable("id") Long id) throws BusinessException {
         return ResponseEntity.ok(service.inativar(id));
     }
-
+    @PreAuthorize( "hasRole('ADMIN')")
     @GetMapping(value = "/moradias/{id}")
     public ResponseEntity<List<MoradiaDTO>> acaoBuscarMoradiasPropietario(@PathVariable("id") Long id) throws BusinessException {
         return ResponseEntity.ok(service.buscarMoradiasDoProprietario(id));

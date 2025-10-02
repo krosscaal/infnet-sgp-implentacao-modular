@@ -11,6 +11,7 @@ import br.edu.infnet.mono.domain.service.MoradiaService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,8 +49,9 @@ public class MoradiaController extends ControllerBase<MoradiaDTO, Long> {
         return ResponseEntity.ok(moradiaService.alterar(id, dto));
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PatchMapping(value = "/{id}/inativar")
-    public ResponseEntity<MoradiaDTO> inativar(@PathVariable Long id) throws BusinessException {
+    public ResponseEntity<MoradiaDTO> inativar(@PathVariable("id") Long id) throws BusinessException {
         return new ResponseEntity<>(moradiaService.inativar(id), HttpStatus.OK);
     }
 

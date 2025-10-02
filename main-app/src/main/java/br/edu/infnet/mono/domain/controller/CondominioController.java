@@ -10,6 +10,7 @@ import br.edu.infnet.mono.domain.exception.BusinessException;
 import br.edu.infnet.mono.domain.service.CondominioService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,6 +51,7 @@ public class CondominioController extends ControllerBase<CondominioDTO, Long> {
     protected void acaoExcluir(Long id) throws BusinessException {
         service.excluir(id);
     }
+    @PreAuthorize( "hasRole('ADMIM')")
     @PatchMapping(value = "/{id}/inativar")
     protected ResponseEntity<CondominioDTO> acaoInativar(@PathVariable("id") Long id) throws BusinessException {
         return ResponseEntity.ok(service.inativar(id));

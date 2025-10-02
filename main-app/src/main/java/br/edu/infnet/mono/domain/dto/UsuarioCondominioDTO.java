@@ -33,7 +33,6 @@ public class UsuarioCondominioDTO {
     @Email(message = FORMATO_E_MAIL_INCORRETO)
     private String email;
 
-    @NotNull(message = NAO_NULL)
     @Enumerated(EnumType.STRING)
     private EnumTipoSituacao situacao;
 

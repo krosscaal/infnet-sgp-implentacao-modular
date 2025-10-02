@@ -32,7 +32,6 @@ public class MoradiaDTO {
     @Pattern(regexp = "^\\d+$", message = DEVE_CONTER_SOMENTE_NUMEROS)
     private String numeroUnidade;
 
-    @NotNull(message = NAO_NULL)
     @Enumerated(EnumType.STRING)
     private EnumTipoSituacao situacao;
 

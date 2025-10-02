@@ -5,6 +5,7 @@
 
 package br.edu.infnet.mono.domain.exceptionhandler;
 
+import org.springframework.security.access.AccessDeniedException;
 import br.edu.infnet.mono.domain.exception.BusinessException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
@@ -41,6 +42,15 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
     public ApiExceptionHandler(MessageSource messageSource) {
         this.messageSource = messageSource;
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<Object> handleAccessDeniedException(final AccessDeniedException ex, final WebRequest request) {
+        HttpStatus status = HttpStatus.FORBIDDEN;
+        String path = request.getDescription(false).replace("uri=", "");
+        String mensagem = String.format("ACESSO NEGADO!: Você não tem permissão para acessar o recurso '%s'. Apenas usuários com perfil de ADMINISTRADOR podem executar esta ação.", path);
+        ApiErrors apiErrors = new ApiErrors(status.value(), LocalDateTime.now().format(dataFormatada), mensagem);
+        return handleExceptionInternal(ex, apiErrors, new HttpHeaders(), status, request);
     }
 
     @ExceptionHandler(BusinessException.class)

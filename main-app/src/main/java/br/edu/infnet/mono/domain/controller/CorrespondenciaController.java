@@ -8,7 +8,6 @@ package br.edu.infnet.mono.domain.controller;
 import br.edu.infnet.mono.domain.dto.CorrespondenciaDTO;
 import br.edu.infnet.mono.domain.exception.BusinessException;
 import br.edu.infnet.mono.domain.service.CorrespondenciaService;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;

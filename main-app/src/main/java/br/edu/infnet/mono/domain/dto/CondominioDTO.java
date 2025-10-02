@@ -53,7 +53,6 @@ public class CondominioDTO {
     @Pattern(regexp = "^\\d{10,11}$", message = DEVE_CONTER_SOMENTE_NUMEROS)
     String telefoneSindico;
 
-    @NotNull(message = NAO_NULL)
     @Enumerated(EnumType.ORDINAL)
     EnumTipoSituacao situacao;
 

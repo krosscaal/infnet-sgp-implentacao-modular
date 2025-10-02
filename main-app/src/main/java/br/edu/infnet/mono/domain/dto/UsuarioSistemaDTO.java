@@ -38,7 +38,6 @@ public class UsuarioSistemaDTO {
     @NotBlank(message = E_UM_CAMPO_OBRIGATORIO)
     private String password;
 
-    @NotNull(message = NAO_NULL)
     @Enumerated(EnumType.STRING)
     private EnumTipoSituacao situacao;
 
