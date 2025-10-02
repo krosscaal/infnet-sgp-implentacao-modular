@@ -84,6 +84,8 @@
       "mensagem": "Mensagem descritiva do erro"
     }
 
+    Arquivo json postman para testea incluso no projeto
+[krossbyapi-infnet.postman_collection.json](krossbyapi-infnet.postman_collection.json)
 
 ## Tecnologias utilizadas
 
