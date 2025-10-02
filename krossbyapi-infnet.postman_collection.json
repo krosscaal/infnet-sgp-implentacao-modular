@@ -12,6 +12,21 @@
 				{
 					"name": "obter",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -31,6 +46,21 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -76,11 +106,26 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nomeCondominio\": \"Condominio atualizado\",\n    \"tipoCondominio\": 0,\n    \"totalUnidades\": 150,\n    \"cnpj\": 83000000180,\n    \"telefoneContato1\": \"41999998\",\n    \"telefoneContato2\": \"41777777777\",\n    \"endereco\": {\n        \"logradouro\": \"rua dionizio\",\n        \"numero\": \"201\",\n        \"complemento\": \"residnecial\",\n        \"bairro\" : \"santo antonio\",\n        \"localidade\" : \"São José dos Pinhais\",\n        \"cep\" : \"83025335\",\n        \"estado\" : \"Parana\",\n        \"uf\" : \"PR\"\n    },\n    \"nomeSindico\": \"Javier Telles Sampaio\",\n    \"telefoneSindico\": \"41999998888\"\n}",
+							"raw": "{\n    \"nomeCondominio\": \"Condominio atualizado\",\n    \"tipoCondominio\": 0,\n    \"totalUnidades\": 150,\n    \"cnpj\": 830000001800894,\n    \"telefoneContato1\": \"41999998787\",\n    \"telefoneContato2\": \"41777777777\",\n    \"endereco\": {\n        \"logradouro\": \"rua dionizio\",\n        \"numero\": \"201\",\n        \"complemento\": \"residnecial\",\n        \"bairro\" : \"santo antonio\",\n        \"localidade\" : \"São José dos Pinhais\",\n        \"cep\" : \"83025335\",\n        \"estado\" : \"Parana\",\n        \"uf\" : \"PR\"\n    },\n    \"nomeSindico\": \"Javier Telles Sampaio\",\n    \"telefoneSindico\": \"41999998888\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -88,14 +133,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/condominio/4",
+							"raw": "localhost:8080/condominio/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"condominio",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -104,17 +149,32 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/condominio/4",
+							"raw": "localhost:8080/condominio/1",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"condominio",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -123,17 +183,32 @@
 				{
 					"name": "Inativar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/condominio/3/inativar",
+							"raw": "localhost:8080/condominio/1/inativar",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"condominio",
-								"3",
+								"1",
 								"inativar"
 							]
 						}
@@ -148,6 +223,21 @@
 				{
 					"name": "obter",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -185,11 +275,26 @@
 				{
 					"name": "Incluir",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"nome\": \"carlos teste\",\n    \"sobreNome\": \"sobrenome\",\n    \"cpf\": \"110.021.260-45\",\n    \"rg\": null,\n    \"telefone1\": \"41999900000\",\n    \"telefone2\": null\n}",
+							"raw": "{\n    \"nome\": \"nome\",\n    \"sobreNome\": \"sobrenome\",\n    \"cpf\": \"921.450.240-42\",\n    \"rg\": null,\n    \"telefone1\": \"41999900000\",\n    \"telefone2\": null\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -240,6 +345,21 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -259,16 +379,31 @@
 				{
 					"name": "Inativar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/usuario-condominio/10/inativar",
+							"raw": "localhost:8080/usuario/10/inativar",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"usuario-condominio",
+								"usuario",
 								"10",
 								"inativar"
 							]
@@ -279,6 +414,21 @@
 				{
 					"name": "buscar usuario por CPF",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -328,6 +478,21 @@
 				{
 					"name": "listar moradias do propietario",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -348,6 +513,21 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -366,11 +546,26 @@
 				{
 					"name": "Incluir",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"usuario\": {\n        \"id\": 2\n    },\n    \"tipoResidente\": \"PROPIETARIO\",\n    \"email\": \"usuarioapi@gmail.com\"\n}",
+							"raw": "{\n    \"usuario\": {\n        \"id\": 19\n    },\n    \"tipoResidente\": \"MORADOR\",\n    \"email\": \"usuarioapi@gmail.com\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -393,6 +588,21 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -421,6 +631,21 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -440,6 +665,21 @@
 				{
 					"name": "Inativar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"url": {
@@ -465,6 +705,21 @@
 				{
 					"name": "obter",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -484,6 +739,21 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -502,6 +772,21 @@
 				{
 					"name": "Incluir",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -557,6 +842,21 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -576,6 +876,21 @@
 				{
 					"name": "Inativar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"url": {
@@ -601,6 +916,21 @@
 				{
 					"name": "obter",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -620,6 +950,21 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -638,6 +983,21 @@
 				{
 					"name": "Incluir",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -665,6 +1025,21 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -693,6 +1068,21 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -712,16 +1102,31 @@
 				{
 					"name": "Inativar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PATCH",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/usuario-sistema/2/inativar",
+							"raw": "localhost:8080/moradia/2/inativar",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"usuario-sistema",
+								"moradia",
 								"2",
 								"inativar"
 							]
@@ -737,6 +1142,21 @@
 				{
 					"name": "obter",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -756,6 +1176,21 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -774,6 +1209,21 @@
 				{
 					"name": "Incluir",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -801,11 +1251,26 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"usuarioVisitante\": {\n        \"id\": 17\n    },\n    \"tipoAcesso\": \"VISITANTE\",\n    \"cartaoAcesso\": \"40001\",\n    \"moradiaDestinoVisitante\": {\n        \"id\": 1\n    },\n    \"usuarioAutorizacao\": {\n        \"id\": 1\n    },\n    \"observacao\": \"acesso novo update\"\n}",
+							"raw": "{\n    \"usuarioVisitante\": {\n        \"id\": 17\n    },\n    \"tipoAcesso\": \"VISITANTE\",\n    \"cartaoAcesso\": \"80001\",\n    \"moradiaDestinoVisitante\": {\n        \"id\": 1\n    },\n    \"usuarioAutorizacao\": {\n        \"id\": 1\n    },\n    \"observacao\": \"acesso novo update\",\n    \"ingresso\": \"02/10/2025 08:00:00\"\n\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -813,14 +1278,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/visitante/5",
+							"raw": "localhost:8080/visitante/19",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"visitante",
-								"5"
+								"19"
 							]
 						}
 					},
@@ -829,17 +1294,32 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/visitante/5",
+							"raw": "localhost:8080/visitante/10",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
 								"visitante",
-								"5"
+								"10"
 							]
 						}
 					},
@@ -848,10 +1328,25 @@
 				{
 					"name": "buscar visitantes por data",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8080/visitante/data?data=07/08/2025",
+							"raw": "localhost:8080/visitante/data?data=25/08/2025",
 							"host": [
 								"localhost"
 							],
@@ -863,7 +1358,7 @@
 							"query": [
 								{
 									"key": "data",
-									"value": "07/08/2025"
+									"value": "25/08/2025"
 								}
 							]
 						}
@@ -873,6 +1368,21 @@
 				{
 					"name": "buscar visitante por CPF",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -903,6 +1413,21 @@
 				{
 					"name": "obter",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -922,6 +1447,21 @@
 				{
 					"name": "Listar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -940,11 +1480,26 @@
 				{
 					"name": "Incluir",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"moradiaEntrega\": {\n        \"id\": 1\n    },\n    \"nomeDestinatario\": \"Carlos\",\n    \"telefoneDestinatario\": \"4199999999\",\n    \"emailDestinatario\": null,\n    \"codigoIdentificadorDaEntrega\": null,\n    \"usuarioRecepcao\": {\n        \"id\": 2\n    }\n}",
+							"raw": "{\n    \"moradiaEntrega\": {\n        \"id\": 1\n    },\n    \"nomeDestinatario\": \"nome morador\",\n    \"telefoneDestinatario\": \"4199999990\",\n    \"emailDestinatario\": \"email@c\",\n    \"codigoIdentificadorDaEntrega\": null,\n    \"dataRecepcao\" : \"2025-08-25T10:30:00.000Z\",\n    \"usuarioRecepcao\": {\n        \"id\": 2\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -967,11 +1522,26 @@
 				{
 					"name": "Atualizar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"moradiaEntrega\": {\n        \"id\": 2\n    },\n    \"nomeDestinatario\": \"Carlos\",\n    \"telefoneDestinatario\": \"4199999999\",\n    \"emailDestinatario\": \"emailteste@gmail.com\",\n    \"codigoIdentificadorDaEntrega\": \"ABG67890AS\",\n    \"usuarioRecepcao\": {\n        \"id\": 2\n    }\n}",
+							"raw": "{\n    \"moradiaEntrega\": {\n        \"id\": 2\n    },\n    \"nomeDestinatario\": \"Carlos\",\n    \"telefoneDestinatario\": \"41999999944\",\n    \"emailDestinatario\": \"emailteste@mai.com\",\n    \"codigoIdentificadorDaEntrega\": \"ABG67890AS\",\n    \"dataRecepcao\" : \"2025-08-25T10:30:00.000Z\",\n    \"usuarioRecepcao\": {\n        \"id\": 2\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -995,6 +1565,21 @@
 				{
 					"name": "Apagar",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
